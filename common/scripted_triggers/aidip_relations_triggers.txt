@@ -1,0 +1,86 @@
+# AI DIP Relations Triggers
+# План: пороговые триггеры для дипломатической логики A -> B.
+#
+# ВАЖНО: это каркас. Условия чтения значений параметров должны быть
+# привязаны к выбранному формату хранения relation-state.
+
+# -----------------------------------------------------------------------------
+# Базовые одиночные пороги
+# -----------------------------------------------------------------------------
+aidip_trust_low = {
+	# TODO: trust <= -40
+}
+
+aidip_trust_high = {
+	# TODO: trust >= 40
+}
+
+aidip_fear_high = {
+	# TODO: fear >= 60
+}
+
+aidip_threat_perception_high = {
+	# TODO: threat_perception >= 65
+}
+
+aidip_reliability_low = {
+	# TODO: reliability_score <= 35
+}
+
+aidip_betrayal_memory_high = {
+	# TODO: betrayal_memory >= 55
+}
+
+# -----------------------------------------------------------------------------
+# Комбинированные пороги (пример: "высокий страх + низкое доверие")
+# -----------------------------------------------------------------------------
+aidip_fear_high_trust_low = {
+	# AND:
+	# - aidip_fear_high
+	# - aidip_trust_low
+}
+
+aidip_war_risk_extreme = {
+	# AND:
+	# - threat_perception >= 75
+	# - trust <= -50
+	# - betrayal_memory >= 50
+}
+
+aidip_subordination_window = {
+	# AND:
+	# - fear >= 55
+	# - dependence >= 50
+	# - public_stance >= 10
+	# - hidden_stance <= -10
+}
+
+aidip_fake_friend = {
+	# AND:
+	# - public_stance >= 30
+	# - hidden_stance <= -30
+	# - opportunism_score >= 60
+}
+
+aidip_reconciliation_possible = {
+	# AND:
+	# - trust >= 20
+	# - gratitude >= 25
+	# - threat_perception <= 35
+	# - betrayal_memory <= 30
+}
+
+# -----------------------------------------------------------------------------
+# Decision helper triggers
+# -----------------------------------------------------------------------------
+aidip_should_offer_concessions = {
+	# (fear high OR threat high) AND influence low
+}
+
+aidip_should_seek_alliance = {
+	# trust high AND ideological_affinity high AND reliability high
+}
+
+aidip_should_prepare_betrayal = {
+	# opportunism high AND hidden_stance low AND reliability low
+}
