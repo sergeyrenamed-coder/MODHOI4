@@ -1,0 +1,6 @@
+# aidip_ scripted effects placeholders
+
+aidip_apply_ai_result = {
+    set_country_flag = aidip_flag_ai_result_applied
+    set_variable = { aidip_var_ai_result_version = 1 }
+}

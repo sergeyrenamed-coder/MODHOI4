@@ -1,0 +1,12 @@
+# aidip_ on_actions placeholders
+# Flags: aidip_flag_*
+# Variables: aidip_var_*
+# Events: aidip.<id>
+
+on_actions = {
+    on_game_start = {
+        effect = {
+            country_event = { id = aidip.1 }
+        }
+    }
+}

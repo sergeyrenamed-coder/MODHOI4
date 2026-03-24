@@ -1,0 +1,2 @@
+# Top-level scripted_effects placeholder for aidip_
+# Use common/scripted_effects/aidip_effects.txt for active scripted effects.

@@ -1,0 +1,2 @@
+# Top-level scripted_triggers placeholder for aidip_
+# Use common/scripted_triggers/aidip_triggers.txt for active scripted triggers.
