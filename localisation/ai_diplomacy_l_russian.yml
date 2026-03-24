@@ -1,0 +1,19 @@
+l_russian:
+  aidip_action_accept:0 "Принять"
+  aidip_action_reject:0 "Отклонить"
+  aidip_action_counter:0 "Контрпредложение"
+  aidip_action_ultimatum:0 "Ультиматум"
+  aidip_action_delay:0 "Запросить отсрочку"
+
+  aidip_response_accept:0 "Предложение принято"
+  aidip_response_reject:0 "Предложение отклонено"
+  aidip_response_counter:0 "Получено контрпредложение"
+  aidip_response_ultimatum:0 "Выдвинут ультиматум"
+  aidip_response_delay:0 "Запрошена задержка ответа"
+
+  aidip_label_action_type:0 "Тип обращения"
+  aidip_label_terms:0 "Параметры сделки"
+  aidip_label_cost:0 "Цена/стоимость"
+  aidip_label_chronicle:0 "История контактов"
+  aidip_label_reply:0 "Ответ/контрпредложение"
+  aidip_button_send:0 "Отправить"
