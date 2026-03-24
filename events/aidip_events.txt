@@ -1,0 +1,16 @@
+# aidip_ namespace placeholders
+# Event naming convention: aidip.<id>
+
+namespace = aidip
+
+country_event = {
+    id = aidip.1
+    title = aidip_event_1_title
+    desc = aidip_event_1_desc
+    is_triggered_only = yes
+
+    immediate = {
+        set_country_flag = aidip_flag_event_fired
+        set_variable = { aidip_var_last_event_id = 1 }
+    }
+}

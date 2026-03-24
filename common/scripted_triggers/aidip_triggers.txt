@@ -1,0 +1,5 @@
+# aidip_ scripted triggers placeholders
+
+aidip_has_ai_payload = {
+    has_country_flag = aidip_flag_ai_payload_ready
+}

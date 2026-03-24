@@ -1,0 +1,13 @@
+# aidip_ decisions placeholders
+
+country_decisions = {
+    aidip_request_ai_cycle = {
+        icon = generic_decision
+        visible = { always = yes }
+        available = { always = yes }
+        complete_effect = {
+            set_country_flag = aidip_flag_decision_used
+            set_variable = { aidip_var_decision_count = 1 }
+        }
+    }
+}
