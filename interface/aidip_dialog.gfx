@@ -1,0 +1,16 @@
+spriteTypes = {
+	# ai_dialog_* assets
+	spriteType = { name = "GFX_ai_dialog_tab_idle" texturefile = "gfx/interface/ai_diplomacy/ai_dialog_tab_idle.dds" }
+	spriteType = { name = "GFX_ai_dialog_toggle" texturefile = "gfx/interface/ai_diplomacy/ai_dialog_toggle.dds" }
+	spriteType = { name = "GFX_ai_dialog_plus" texturefile = "gfx/interface/ai_diplomacy/ai_dialog_plus.dds" }
+	spriteType = { name = "GFX_ai_dialog_minus" texturefile = "gfx/interface/ai_diplomacy/ai_dialog_minus.dds" }
+	spriteType = { name = "GFX_ai_dialog_send" texturefile = "gfx/interface/ai_diplomacy/ai_dialog_send.dds" }
+
+	# ai_chronicle_* assets
+	spriteType = { name = "GFX_ai_chronicle_tab_idle" texturefile = "gfx/interface/ai_diplomacy/ai_chronicle_tab_idle.dds" }
+	spriteType = { name = "GFX_ai_chronicle_panel" texturefile = "gfx/interface/ai_diplomacy/ai_chronicle_panel.dds" }
+
+	# ai_secret_* assets
+	spriteType = { name = "GFX_ai_secret_tab_idle" texturefile = "gfx/interface/ai_diplomacy/ai_secret_tab_idle.dds" }
+	spriteType = { name = "GFX_ai_secret_toggle" texturefile = "gfx/interface/ai_diplomacy/ai_secret_toggle.dds" }
+}

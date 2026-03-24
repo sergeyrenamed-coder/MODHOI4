@@ -1,0 +1,104 @@
+guiTypes = {
+
+	windowType = {
+		name = "aidip_dialog_window"
+		position = { x = 100 y = 60 }
+		size = { width = 1520 height = 920 }
+		moveable = 1
+
+		# --- Tabs planning ---
+		containerWindowType = {
+			name = "aidip_tabs_container"
+			position = { x = 24 y = 18 }
+			size = { width = 1472 height = 48 }
+
+			buttonType = { name = "aidip_tab_overview"   quadTextureSprite = "GFX_ai_dialog_tab_idle" }
+			buttonType = { name = "aidip_tab_terms"      quadTextureSprite = "GFX_ai_dialog_tab_idle" }
+			buttonType = { name = "aidip_tab_response"   quadTextureSprite = "GFX_ai_dialog_tab_idle" }
+			buttonType = { name = "aidip_tab_chronicle"  quadTextureSprite = "GFX_ai_chronicle_tab_idle" }
+			buttonType = { name = "aidip_tab_secret"     quadTextureSprite = "GFX_ai_secret_tab_idle" }
+		}
+
+		# --- Switches / toggles ---
+		containerWindowType = {
+			name = "aidip_switches_container"
+			position = { x = 24 y = 82 }
+			size = { width = 720 height = 120 }
+
+			checkboxType = { name = "aidip_toggle_visible_factors"   quadTextureSprite = "GFX_ai_dialog_toggle" }
+			checkboxType = { name = "aidip_toggle_hidden_factors"    quadTextureSprite = "GFX_ai_secret_toggle" }
+			checkboxType = { name = "aidip_toggle_counter_allowed"   quadTextureSprite = "GFX_ai_dialog_toggle" }
+			checkboxType = { name = "aidip_toggle_ultimatum_mode"    quadTextureSprite = "GFX_ai_secret_toggle" }
+		}
+
+		# --- Lists planning ---
+		containerWindowType = {
+			name = "aidip_lists_container"
+			position = { x = 24 y = 214 }
+			size = { width = 980 height = 500 }
+
+			listboxType = {
+				name = "aidip_country_card_list"
+				position = { x = 0 y = 0 }
+				size = { width = 440 height = 160 }
+			}
+
+			listboxType = {
+				name = "aidip_visible_factors_list"
+				position = { x = 0 y = 176 }
+				size = { width = 440 height = 324 }
+			}
+
+			listboxType = {
+				name = "aidip_hidden_factors_list"
+				position = { x = 456 y = 176 }
+				size = { width = 524 height = 324 }
+			}
+		}
+
+		# --- +/- fields planning ---
+		containerWindowType = {
+			name = "aidip_delta_fields_container"
+			position = { x = 1020 y = 214 }
+			size = { width = 476 height = 360 }
+
+			instantTextBoxType = { name = "aidip_param_resources_value" }
+			buttonType = { name = "aidip_param_resources_plus"  quadTextureSprite = "GFX_ai_dialog_plus" }
+			buttonType = { name = "aidip_param_resources_minus" quadTextureSprite = "GFX_ai_dialog_minus" }
+
+			instantTextBoxType = { name = "aidip_param_guarantees_value" }
+			buttonType = { name = "aidip_param_guarantees_plus"  quadTextureSprite = "GFX_ai_dialog_plus" }
+			buttonType = { name = "aidip_param_guarantees_minus" quadTextureSprite = "GFX_ai_dialog_minus" }
+
+			instantTextBoxType = { name = "aidip_param_intel_value" }
+			buttonType = { name = "aidip_param_intel_plus"  quadTextureSprite = "GFX_ai_dialog_plus" }
+			buttonType = { name = "aidip_param_intel_minus" quadTextureSprite = "GFX_ai_dialog_minus" }
+		}
+
+		# --- Journal planning ---
+		containerWindowType = {
+			name = "aidip_chronicle_container"
+			position = { x = 24 y = 726 }
+			size = { width = 1472 height = 168 }
+			quadTextureSprite = "GFX_ai_chronicle_panel"
+
+			listboxType = {
+				name = "aidip_chronicle_log"
+				position = { x = 12 y = 12 }
+				size = { width = 1320 height = 144 }
+			}
+
+			buttonType = { name = "aidip_chronicle_filter_all" }
+			buttonType = { name = "aidip_chronicle_filter_initiatives" }
+			buttonType = { name = "aidip_chronicle_filter_responses" }
+			buttonType = { name = "aidip_chronicle_filter_secret" }
+		}
+
+		# Send button
+		buttonType = {
+			name = "aidip_send_button"
+			position = { x = 1340 y = 668 }
+			quadTextureSprite = "GFX_ai_dialog_send"
+		}
+	}
+}
