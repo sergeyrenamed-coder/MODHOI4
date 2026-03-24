@@ -1,0 +1,84 @@
+# AI DIP Relations Effects
+# План: эффекты изменения параметров дипломатического состояния A -> B.
+#
+# ВАЖНО: это каркас/план. Реальные переменные, scope и storage
+# нужно связать с выбранной моделью хранения (country variables, dynamic variables,
+# scripted localization keys и т.д.).
+
+# -----------------------------------------------------------------------------
+# Базовый универсальный эффект изменения параметра
+# -----------------------------------------------------------------------------
+aidip_relations_apply_delta = {
+	# Параметры (планируемые):
+	# ROOT = actor (A)
+	# FROM = target (B)
+	# aidip_param_key = "trust" | "fear" | ...
+	# aidip_delta = число
+	# aidip_min / aidip_max = кламп диапазона
+	# aidip_reason = сделка|отказ|угроза|война|помощь
+	# aidip_visibility = public|hidden (для логов)
+
+	# TODO:
+	# 1) Прочитать текущее значение параметра в A->B.
+	# 2) Прибавить aidip_delta.
+	# 3) Ограничить в диапазоне [aidip_min; aidip_max].
+	# 4) Записать обратно.
+	# 5) Записать timestamp и источник изменения (для decay/аналитики).
+}
+
+# -----------------------------------------------------------------------------
+# Источники изменения (шаблоны)
+# -----------------------------------------------------------------------------
+aidip_relations_on_deal = {
+	# Примерная схема:
+	# trust +, respect +, influence +, gratitude +
+	# fear -, threat_perception -
+}
+
+aidip_relations_on_refusal = {
+	# Примерная схема:
+	# trust -, respect -, reliability_score -
+	# betrayal_memory + (если было обещание)
+	# opportunism_score + (если отказ ради выгоды)
+}
+
+aidip_relations_on_threat = {
+	# Примерная схема:
+	# fear +, threat_perception +, leverage +
+	# trust -, public_stance -, hidden_stance -
+}
+
+aidip_relations_on_war = {
+	# Примерная схема:
+	# threat_perception ++, betrayal_memory ++
+	# trust --, gratitude --, public_stance --, hidden_stance --
+}
+
+aidip_relations_on_aid = {
+	# Примерная схема:
+	# gratitude ++, trust +, influence +, dependence +
+	# fear -, threat_perception -
+}
+
+# -----------------------------------------------------------------------------
+# Decay / drift эффекты
+# -----------------------------------------------------------------------------
+aidip_relations_monthly_decay = {
+	# План:
+	# - Применять раз в месяц для каждой активной пары A->B.
+	# - Для каждого параметра сдвигать к целевому baseline.
+	#   baseline = 0 для большинства;
+	#   baseline = 50 для reliability_score/opportunism_score.
+	# - Использовать коэффициенты из docs/diplomacy_state_model.md.
+}
+
+# -----------------------------------------------------------------------------
+# Вспомогательные эффекты
+# -----------------------------------------------------------------------------
+aidip_relations_set_baseline = {
+	# Установить стартовые значения при инициализации сценария/фокуса.
+}
+
+aidip_relations_debug_dump = {
+	# Выгрузка ключевых параметров в лог/GUI для балансировки.
+}
