@@ -1,0 +1,53 @@
+# AIDIP Chronicle GUI Plan
+
+guiTypes = {
+
+    containerWindowType = {
+        name = "aidip_chronicle_window"
+        position = { x = 80 y = 80 }
+        size = { width = 980 height = 620 }
+        moveable = yes
+
+        # Панель фильтров
+        checkboxType = {
+            name = "filter_important_only"
+            position = { x = 24 y = 20 }
+            text = "Только важные события"
+            tooltip = "Скрыть низкоприоритетный шум и оставить только важные развилки."
+        }
+
+        # Список событий хроники
+        listboxType = {
+            name = "chronicle_event_list"
+            position = { x = 20 y = 60 }
+            size = { width = 940 height = 480 }
+            rowHeight = 68
+            columns = {
+                { name = "date" width = 110 }
+                { name = "category" width = 200 }
+                { name = "participants" width = 260 }
+                { name = "summary" width = 250 }
+                { name = "action" width = 120 }
+            }
+
+            itemTemplate = {
+                instantTextBoxType = { name = "event_date" }
+                instantTextBoxType = { name = "event_category" }
+                instantTextBoxType = { name = "event_participants" }
+                instantTextBoxType = { name = "event_summary" }
+
+                buttonType = {
+                    name = "event_intervene_button"
+                    text = "Вмешаться"
+                    tooltip = "Открыть варианты вмешательства по выбранному событию."
+                }
+            }
+        }
+
+        buttonType = {
+            name = "close_chronicle_button"
+            position = { x = 860 y = 560 }
+            text = "Закрыть"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+# AIDIP Dynamic Event Template
+# Планировочный шаблон для наполнения скриптовыми событиями.
+
+aidip_dynamic_event_template = {
+    id = aidip.dynamic_event.template
+
+    # Базовая классификация
+    category = crisis                # crisis | secret_deal_leak | ultimatum | trade_concession | intervention_request
+    importance = medium              # low | medium | high | critical
+
+    # Обязательные поля
+    date = 1939.1.1                  # Дата возникновения события
+    participants = { TAG_A TAG_B }   # Участники: инициатор, адресат, вовлечённые стороны
+    cause = ""                       # Причина: что запустило событие
+    consequences = ""                # Последствия: ожидаемый эффект для региона/фронта/рынка
+
+    # Варианты реакции (минимум 2)
+    reaction_options = {
+        option = {
+            key = "monitor"
+            label = "Наблюдать"
+            effects = "Низкие издержки, риск упущенной эскалации"
+        }
+        option = {
+            key = "intervene"
+            label = "Вмешаться"
+            effects = "Рост затрат, шанс стабилизации и усиления влияния"
+        }
+        option = {
+            key = "exploit"
+            label = "Использовать в своих интересах"
+            effects = "Краткосрочная выгода, долгосрочный дипломатический риск"
+        }
+    }
+
+    # Технические примечания
+    # - Для высоко/критично важных событий добавлять отдельный сигнал в хронику.
+    # - Для низкой важности разрешено агрегирование в сводку, без отдельной карточки.
+}

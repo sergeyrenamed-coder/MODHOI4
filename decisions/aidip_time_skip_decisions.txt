@@ -1,0 +1,38 @@
+# AIDIP Time Skip Decisions Plan
+
+aidip_time_skip_decisions = {
+
+    decision = {
+        id = aidip_time_skip_3_months
+        label = "3 months"
+        skip_days = 90
+        description = "Быстрый переход через квартал для оценки краткосрочных эффектов решений."
+        safeguards = {
+            stop_on_critical_event = yes
+            show_summary_before_apply = yes
+        }
+    }
+
+    decision = {
+        id = aidip_time_skip_6_months
+        label = "6 months"
+        skip_days = 180
+        description = "Полугодовой пропуск для анализа среднесрочной динамики кризисов и торговли."
+        safeguards = {
+            stop_on_high_or_critical_event = yes
+            require_player_confirmation = yes
+        }
+    }
+
+    decision = {
+        id = aidip_time_skip_1_year
+        label = "1 year"
+        skip_days = 365
+        description = "Годовой пропуск для стратегического планирования при стабильной обстановке."
+        safeguards = {
+            stop_on_any_important_event = yes
+            require_double_confirmation = yes
+            auto_open_chronicle_after_skip = yes
+        }
+    }
+}
